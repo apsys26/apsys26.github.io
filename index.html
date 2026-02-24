@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APSys 2026</title>
+<meta name="description" content="APSys 2026 is a lively forum for systems researchers and practitioners across the world to meet, interact, and collaborate with their peers from the Asia/Pacific region.
+">
+<link rel="stylesheet" href="./main.css">
+<link rel="canonical" href="https://apsys2026.github.io">
+<link rel="alternate" type="application/rss+xml" title="16th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2026)">
+</head>
+
+
+<body>
+
+<!-- header injected from inc/header.html -->
+<div id="site-header-placeholder"></div>
+<script src="./inc/load-header.js"></script>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="wrapper-right">
+
+<h3 style="color:#002E60">News</h3>
+
+<!--
+<p>August 6, 2023<br>
+<strong></Strong><a href="./registration.html">Registration</a> page is online.
+
+<p>August 2, 2023<br>
+<strong></Strong><a href="./grants.html">Student Travel Grant</a> and <a href="./grants.html">Childcare, Diversity Grant</a> pages are online.
+
+<p>July 28, 2023<br>
+<strong></Strong><a href="./program.html">Program for ApSys 2023</a> is online.
+</p>
+
+<p>July 20, 2018<br>
+<strong></Strong><a href="./instructions.html">Camera-ready paper and poster format instructions</a> are now available.
+</p>
+
+<p>Jan 29, 2018<br>
+<a href="./call_for_papers.html">Call for papers and posters</a> is online.
+</p>
+
+<p>May 31, 2018<br>
+Paper and poster deadline extended to June 5th 23:59 GMT.
+</p>
+
+<p>Apr 26, 2018<br>
+<strong></Strong><a href="http://apsys23.skku.edu/call_for_papers.html#call_for_posters">Call for posters</a> is now available.
+</p>
+-->
+
+<hr><br>
+<h3 style="color:#002E60">Important dates</h3>
+<p>
+Abstract due: May 13, 2026 (AoE)<br>
+Submission due: May 20, 2026 (AoE)<br>
+Notification to authors: July 29, 2026<br>
+Camera-ready due: August 20, 2026<br>
+Workshop: September 17 to 18, 2026<br>
+</p>
+
+        </div>
+
+        <div style="height:auto; max-width:750px; float:left;">
+<!---
+Date: 29 Jan 2018
+Author: YoungGyoun Moon
+Purpose: To build a website for APSys 2018
+Copy From: APSys 2016 website
+--->
+<!-- ===== Live Announcement (drop-in) ===== -->
+<style>
+  /* Announcement bar */
+  #live-announcement.announce{
+    background:#fff7cc;                 /* soft yellow */
+    border:1px solid #ffe08a;
+    box-shadow:0 1px 0 rgba(0,0,0,0.04) inset;
+    border-radius:6px;
+    padding:12px 14px;
+    margin:10px 0 18px;                 /* pushes content down */
+    color:#2b2b2b;
+    font:400 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* +2px */
+    width:100%;
+    box-sizing:border-box;
+    clear:both;                          /* sit above floated columns */
+  }
+
+  #live-announcement .announce-body{
+    display:flex; align-items:flex-start; gap:12px;
+  }
+
+  #live-announcement .announce-left{ flex:1; min-width:0; }
+
+  /* Title centered, +2px */
+  #live-announcement .announce-title{
+    font-weight:700;
+    margin:0 0 6px;
+    color:#5a4500;
+    font-size:22px;                      /* was 20px */
+    text-align:center;                   /* center align */
+    align-self:stretch;
+  }
+
+  /* Body text inherits 18px from container; keep explicit if you prefer */
+  #live-announcement .announce-text{
+    font-size:18px;                      /* base +2px */
+  }
+
+  /* Links inside body +2px */
+  #live-announcement .announce-text a{
+    color:#1a56db;
+    text-decoration:underline;
+    font-size:22px;                      /* was 20px */
+  }
+
+  /* Meta +2px */
+  #live-announcement .announce-meta{
+    font-size:15px;                      /* was 13px */
+    color:#6b7280;
+    margin-top:4px;
+  }
+
+  /* Close icon +2px (if present) */
+  #live-announcement .announce-close{
+    appearance:none; border:0; background:transparent; cursor:pointer;
+    font-size:24px;                      /* was 22px */
+    line-height:1; padding:0 4px; color:#6b5a00;
+  }
+  #live-announcement .announce-close:hover{ color:#3f3700; }
+
+  /* Print: hide the banner */
+  @media print{ #live-announcement{ display:none !important; } }
+
+  /* Small screens */
+  @media (max-width:640px){
+    #live-announcement{ padding:10px 12px; }
+    #live-announcement .announce-body{ gap:8px; }
+  }
+</style>
+
+<!-- <div id="live-announcement" class="announce" role="region" aria-live="polite" aria-label="Live announcement">
+  <div class="announce-body">
+    <div class="announce-left">
+      <div class="announce-title",align="center">Information for Workshop Attendees</div>
+      <div class="announce-text">
+        Registration and the banquet are at <strong>Crystal Ballroom 3</strong> on the third floor of Lotte Hotel World.
+      </div>
+    </div>
+  </div>
+</div> -->
+<script>
+  (function(){
+    const BOX_ID = 'live-announcement';
+    const el = document.getElementById(BOX_ID);
+    if (!el) return;
+
+    // Ensure it shows even if a previous version stored a dismissal flag
+    try {
+      localStorage.removeItem('apsys_announce_msg_v1');
+      localStorage.removeItem('apsys_announce_msg_v2');
+    } catch(e){}
+
+    // Make sure it’s visible
+    el.style.display = '';
+  })();
+  </script>
+<!-- ===== /Live Announcement ===== -->
+
+
+<h1 id="overview">Welcome to the APSys 2026 Website! </h1>
+<p>Building on the success of its <a href="past.html">predecessors</a>,
+  the 17th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2026) will continue to serve
+  as a vibrant forum for researchers and practitioners to present innovative and emerging
+  ideas in systems research, fostering discussion and collaboration within the Asia-Pacific
+  region and beyond. This year, APSys 2026 will be held in Bangkok, Thailand</a>,
+  on September 17-18.
+
+  <!-- We take a broad view of computer systems and welcome papers on topics such as:</p> -->
+
+
+<!-- Building on the success of its <a href="past.html">predecessors</a>,
+the 16th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2025) will continue to be a lively
+forum for systems researchers and practitioners across the world to meet, interact, and
+collaborate with their peers from the Asia/Pacific region. The 2023 ACM APSys will be held in
+<a href="./">Seoul, South Korea</a> on October 12-13, 2025, co-located with <a href="https://sigops.org/s/conferences/sosp/2025/">SOSP 2025</a>.
+We take a broad view of computer systems, and solicit papers on topics such as:</p> -->
+
+<!-- <ul>
+	<li>Operating systems</li>
+  <li>Virtualization</li>
+  <li>File and storage systems</li>
+	<li>Networked systems</li>
+	<li>Mobile, embedded, and IoT systems</li>
+	<li>Cloud computing and data centers</li>
+	<li>Edge computing</li>
+	<li>Big data systems</li>
+	<li>Distributed systems</li>
+	<li>Green and sustainable computing</li>
+	<li>Debugging, testing, and verification</li>
+	<li>Measurement, monitoring, and modeling</li>
+	<li>Reliability, scalability, and fault tolerance</li>
+	<li>Security and privacy</li>
+	<li>Systems for machine learning, machine learning for systems</li>
+	<li>Hardware and software interaction</li>
+	<li>Experience with deployed systems</li>
+	<li>Blockchain and cryptocurrency systems</li>
+</ul>
+ -->
+
+<!-- <br>
+
+<h1 id="sponsors">Sponsors</h1>
+<h3 class="h3-center" id="platinum_sponsors">:: Platinum Sponsor ::</h3>
+
+<div style="text-align:center;">
+  <div style="display:flex; justify-content:center; align-items:center; gap:24px; margin:24px 0;">
+    <a href="https://www.westerndigital.com/">
+      <img src="./images/WDC-Logo-1-1-Primary-RGB-Color-on-White-Background.svg" height="150" alt="WesternDigital">
+    </a>
+  </div>
+</div>
+
+
+    <div class="spacer"></div>
+
+    <style>
+    .spacer {
+      height: 1rem;
+    }
+    </style>
+
+
+<h3 class="h3-center" id="silver_sponsors">:: Silver Sponsors ::</h3>
+
+<div style="text-align:center;">
+  <div style="display:flex; justify-content:center; align-items:center; gap:24px; margin:24px 0;">
+    <a href="https://hyperaccel.ai/">
+      <img src="./images/HYPERACCEL_verticallogo.png" height="65" alt="HyperAccel">
+    </a>
+    <a href="https://rebellions.ai/">
+      <img src="./images/rebellions.png" height="70" alt="Rebellions">
+    </a>
+  </div>
+</div>
+
+
+    <div class="spacer"></div>
+
+    <style>
+    .spacer {
+      height: 1rem;
+    }
+    </style>
+
+    <h3 class="h3-center" id="bronze_sponsors">:: Bronze Sponsors ::</h3>
+    <div style="text-align:center;">
+      <div style="display:flex; justify-content:center; align-items:center; gap:24px; margin:24px 0;">
+        <a href="https://www.rtst.co.kr/">
+          <img src="./images/rtst_logo.png" height="50">
+          </a>
+        <a href="https://panmnesia.com/">
+          <img src="./images/panmnesia_logo_final-simple-black.png" height=35" alt="Panmnesia">
+        </a>
+      </div>
+    </div>
+
+<h1  id="organization">Organization</h1>
+    <div align="center">
+      <span>
+          <a href="http://www.sigops.org/">
+        <img src="./images/sigops.png" height="65">
+        </a>
+      </span>
+    </div> -->
+
+
+
+<!--h2 id="platinum">Gold</h2>
+<h2 id="platinum">Silver</h2>
+<h2 id="platinum">Bronze</h2-->
+
+<br>
+<!--h2 id="cooperation">In cooperation with</h2>
+    <div align="center">
+      <span style="margin-left: 20pt">
+        <a href="http://www.kiise.or.kr/">
+        <img src="./images/kiise_logo.png" height="45">
+        </a>
+      </span>
+      <span style="margin-left: 20pt">
+        <a href="https://css.or.kr/">
+        <img src="./images/fadsf.jpg" height="45">
+        </a>
+      </span>
+      <span style="margin-left: 20pt">
+        <a href="http://www.skku.edu/">
+        <img src="./images/skku_logo.jpg" height="150">
+        </a>
+      </span>
+    </div>
+   </div>
+  </div>
+</div-->
+
+<!--footer class="site-footer">
+<hr>
+<div class="wrapper"><p style="line-height=1.2">
+[KIISE] Korean Institute of Information Scientists and Engineers |
+<a href="https://www.kiise.or.kr/academy/main/association.fa?MENU_ID=020300">Terms of Use 이용약관</a> |
+<a href="https://www.kiise.or.kr/academy/main/privacy.fa?content_no=65">Privacy Statement 개인정보취급방침</a><br>
+#401 Meorijae Bldg., 76, Bangbae-ro, Seocho-gu, Seoul 06704, Korea<br>
+Phone: +82-2-588-4002 | Fax: +82-2-521-1352 | Email: hdg9400@skku.edu | Homepage: <a href="https://www.kiise.or.kr">https://www.kiise.or.kr</a><br>
+Buisiness Registration Number: 114-82-03170<br>
+</p></div>
+</footer-->
+
+
+</body></html>
