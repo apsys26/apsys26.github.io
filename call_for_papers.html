@@ -79,39 +79,10 @@
 
 <h1 id="submissions">Submissions</h1>
 <p>
-Submissions must be five pages or fewer excluding references, formatted using the sigconf proceedings template
-(two-column format, 10-pt font size) available on the
-<a href="https://www.acm.org/publications/proceedings-template">official ACM site</a>.
-</p>
-
-<p>LaTeX submissions should use the acmart.cls template (sigconf option), with the 10-pt font, and should have the following structure: </p>
-
-<pre><code>% use the base acmart.cls
-% use the sigconf proceeding template with 10 pt fonts
-% nonacm option removes ACM related text in the submission.
-\documentclass[sigconf,nonacm,10pt]{acmart}
-
-% enable page numbers
-\settopmatter{printfolios=true}
-
-\begin{document}
-\title{...}
-
-\begin{abstract}
-...
-\end{abstract}
-
-\maketitle % should come after the abstract
-
-% add the paper content here
-
-% use the ACM bibliography style
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{...}
-
-\end{document}
-</code></pre>
-
+Submissions must be five pages or fewer excluding references, formatted using the standard ACM
+proceedings two column conference style with 10 point font size. Authors should consult the ACM
+proceedings template page for the most up to date files and instructions
+(<a href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>).</p>
 
 <p>
   Reviewing is double blind. Submissions must not include author names or affiliations.
@@ -135,7 +106,7 @@ Submissions must be five pages or fewer excluding references, formatted using th
 
 
 <p>
-  ACM proceedings template: https://www.acm.org/publications/proceedings-template
+  ACM proceedings template: <a href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>
 </p>
 
 <p>Submission site: TBA </p>
@@ -150,7 +121,6 @@ Submissions must be five pages or fewer excluding references, formatted using th
 <li>Camera-ready due: August 20, 2026</li>
 <li>Workshop: September 17 to 18, 2026</li>
 </ul>
-
 
 <h1 id="policy">Submission Policy</h1>
 <p>
@@ -198,8 +168,47 @@ their institutions to join ACM Open during this transition period.</p>
 <p>This temporary subsidized pricing will apply to all conferences scheduled for 2026.</p>
 
 
+<h1 id="formatting-guidelines">Formatting guidelines</h1>
 
-</footer>
+<p>Submissions must be printable PDF files. When creating your submission, you must use the sigconf proceedings
+  template (two-column format, 10-pt font size) available on the <a href="https://www.acm.org/publications/proceedings-template">
+  official ACM site</a>. LaTeX submissions should use
+  the acmart.cls template (sigconf option), with the 10-pt font.</p>
+
+<p>Your main LaTeX file should have the following structure: </p>
+
+<pre><code>% use the base acmart.cls
+% use the sigconf proceeding template with 10 pt fonts
+% nonacm option removes ACM related text in the submission.
+\documentclass[sigconf,nonacm,10pt]{acmart}
+
+% enable page numbers
+\settopmatter{printfolios=true}
+
+\begin{document}
+\title{...}
+
+\begin{abstract}
+...
+\end{abstract}
+
+\maketitle % should come after the abstract
+
+% add the paper content here
+
+% use the ACM bibliography style
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{...}
+
+\end{document}
+</code></pre>
+
+
+<h1 id="new-open-access-policy">Generative AI Use</h1>
+
+<p>Authors must not submit papers produced entirely or substantially by generative AI. However, the use of AI tools
+  for editing and improving the grammar or clarity of authors' own human-written text is permitted. For any
+  questions regarding the appropriate use of generative AI, please contact the program chairs.</p>
 
 
 
