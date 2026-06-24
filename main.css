@@ -263,13 +263,15 @@ pre {
 .nav-logo {
   display: inline-block;
   margin-right: 1rem;   /* space between logo and menu items */
+  vertical-align: middle;
 }
 
 /* Constrain the logo’s size */
 .nav-logo img {
-  height: 45px;         /* or whatever fits your header */
-  width: auto;
-  margin-bottom: 8px;/* moves it 2px upward */
+  display: block;
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
 }
 
 
