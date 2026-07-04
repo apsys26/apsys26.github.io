@@ -52,7 +52,7 @@
 <div class="wrapper">
 <div class="wrapper-right">
 
-<h3 style="color:#002E60">News</h3>
+<!-- <h3 style="color:#002E60">News</h3> -->
 
 <!--
 <p>August 6, 2023<br>
@@ -82,15 +82,99 @@ Paper and poster deadline extended to June 5th 23:59 GMT.
 </p>
 -->
 
-<hr><br>
+<!-- <hr><br> -->
 <h3 style="color:#002E60">Important dates</h3>
-<p>
-Abstract due: May 13, 2026 (AoE)<br>
-Submission due: May 20, 2026 (AoE)<br>
-Notification to authors: July 29, 2026<br>
-Camera-ready due: August 20, 2026<br>
-Workshop: September 17 to 18, 2026<br>
-</p>
+
+<style>
+  .imp-dates-group{
+    border-radius:8px;
+    padding:10px 12px;
+    margin-bottom:12px;
+  }
+  .imp-dates-group.papers{
+    background:#e6edf5;
+    border:1px solid #002E60;
+    border-left-width:4px;
+  }
+  .imp-dates-group.posters{
+    background:#f7ead9;
+    border:1px solid #B5651D;
+    border-left-width:4px;
+  }
+  .imp-dates-heading{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:6px;
+  }
+  .imp-dates-group.papers .imp-dates-heading{ color:#002E60; }
+  .imp-dates-group.posters .imp-dates-heading{ color:#B5651D; }
+  .imp-dates-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:6px;
+    margin-bottom:6px;
+  }
+  .imp-dates-item:last-child{ margin-bottom:0; }
+  .imp-dates-item .imp-dates-label{
+    font-size:12px;
+    color:#444;
+    white-space:nowrap;
+  }
+  .imp-dates-item .imp-dates-date{
+    font-size:13px;
+    font-weight:600;
+    text-align:right;
+    white-space:nowrap;
+  }
+  .imp-dates-group.papers .imp-dates-date{ color:#002E60; }
+  .imp-dates-group.posters .imp-dates-date{ color:#B5651D; }
+  .imp-dates-final{
+    padding:2px 2px 0;
+  }
+  .imp-dates-final .imp-dates-item .imp-dates-date{ color:#000; }
+</style>
+
+<div class="imp-dates-group papers">
+  <div class="imp-dates-heading">Papers</div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Abstract due</span>
+    <span class="imp-dates-date">May 13, 2026 (AoE)</span>
+  </div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Submission due</span>
+    <span class="imp-dates-date">May 20, 2026 (AoE)</span>
+  </div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Notification to authors</span>
+    <span class="imp-dates-date">July 29, 2026</span>
+  </div>
+</div>
+
+<div class="imp-dates-group posters">
+  <div class="imp-dates-heading">Posters</div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Abstract due</span>
+    <span class="imp-dates-date">August 4, 2026 (AoE)</span>
+  </div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Notification</span>
+    <span class="imp-dates-date">August 11, 2026 (AoE)</span>
+  </div>
+</div>
+
+<div class="imp-dates-final">
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Camera-ready due</span>
+    <span class="imp-dates-date">August 20, 2026</span>
+  </div>
+  <div class="imp-dates-item">
+    <span class="imp-dates-label">Workshop</span>
+    <span class="imp-dates-date">September 17 to 18, 2026</span>
+  </div>
+</div>
 
         </div>
 
