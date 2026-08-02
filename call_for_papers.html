@@ -192,11 +192,143 @@ resources are listed below:</p>
   <li>ACM policy FAQ including guidance on generative AI: <a href="https://www.acm.org/publications/policies/frequently-asked-questions">https://www.acm.org/publications/policies/frequently-asked-questions</a></li>
 </ul>
 
-<h1 id="new-open-access-policy">Generative AI Use</h1>
+<h1 id="camera-ready-instructions">Camera-ready Instructions</h1>
+
+<p>Below are the instructions for submitting the camera-ready version (CRV) of accepted papers. Briefly, authors need
+  to do the following things: finalize the camera-ready version of the paper, complete the ACM eRights process, and
+  submit the final version of the CRV with all the right ACM information by
+  <strong>Thursday, August 20, 2026 (AoE)</strong>.</p>
+
+<p><strong>Finalizing the camera-ready format</strong></p>
+
+<ul>
+  <li>The final paper, including all text, figures, and tables, must fit within the SIX-page limit.
+    References and appendices have no page limit.</li>
+  <li>For appendices, authors should follow the same guidelines as for the main submission:
+    <ul>
+      <li>They should include only information that is directly referenced in the body of the paper and is not
+        essential for understanding or assessing the paper.</li>
+      <li>They can provide deeper insight or additional details to support the reproducibility of the proposed
+        methods.</li>
+      <li>Examples include proofs and methodological specifics, whereas essential evaluation results should remain
+        in the main body.</li>
+    </ul>
+  </li>
+  <li>ACM is the publisher for APSys 2026. Authors should format the final version in standard ACM two-column
+    conference style with 10-pt font size, using the same
+    <a href="https://www.acm.org/publications/proceedings-template">acmart document class</a> as for the submission:
+    <code>\documentclass[sigconf,10pt]{acmart}</code>. Note that the <code>nonacm</code> option used for the
+    submission must be removed, so that the ACM rights and conference information are printed.</li>
+  <li>Since ACM cannot substitute font types, the fonts of the final papers must be scalable Type 1 fonts, not
+    bit-mapped Type 3, and all fonts must be embedded. Otherwise, the paper may be rejected during the ACM
+    production procedure. The type and embedding of fonts can be checked with various tools, including
+    <code>pdffonts</code>; authors can also refer to the
+    <a href="https://www.acm.org/binaries/content/assets/publications/word-to-pdf-instructions-.txt">embedded font
+    checking guidelines</a> from ACM.</li>
+  <li>Authors must fill in all the metadata required by the template, including CCS concepts, keywords, and the
+    rights information that they receive after completing the ACM rights form.</li>
+  <li>Authors must disclose any use of AI tools that is directly relevant to the conclusions of the paper,
+    including coding, data analysis, and the creation of artifacts such as code, datasets, and figures. These uses
+    must be described in detail in the methods section; the disclosure counts towards the six-page limit.
+    No disclosure is required when AI tools were used only to assist with writing.
+    See <a href="#use-of-artificial-intelligence">Use of Artificial Intelligence</a> below for the full policy and
+    ACM's guidance.</li>
+  <li>Authors must also make sure that:
+    <ul>
+      <li>The ACM Reference Format and rights management text appear on the first page, and the conference
+        information appears in the page header.</li>
+      <li>The PDF is searchable, which can be verified by testing the search function in a PDF reader.</li>
+      <li>Graphs and figures are readable without magnification.</li>
+      <li>There are no page numbers in the CRV.</li>
+      <li>The columns on the last page are balanced.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Completing ACM eRights and submitting the final version of the CRV</strong></p>
+
+<ul>
+  <li>Authors should watch for the ACM eRights email, which is sent to the corresponding author after the organizers
+    lock the metadata, and complete the ACM eRights process. As rights management emails from
+    <a href="mailto:rightsreview@acm.org">rightsreview@acm.org</a> are sent by an automated system, authors should
+    check their SPAM folders if these emails do not appear in their inbox.</li>
+  <li>Completing ACM eRights triggers ACM to send the camera-ready LaTeX directives (e.g., the rights/permission
+    text, DOI, ISBN, and conference information). Authors need to add these to the LaTeX source so that the final
+    CRV contains the correct legal/metadata blocks for Digital Library publication.</li>
+  <li>The final version of the paper should be uploaded through HotCRP:
+    <a href="https://apsys26.hotcrp.com">https://apsys26.hotcrp.com</a>.</li>
+</ul>
+
+<p>All these steps need to be completed by <strong>Thursday, August 20, 2026 (AoE)</strong>. For any additional
+  questions, please send an email to the APSys 2026 publication chair: KyoungSoo Park
+  (<a href="mailto:apsys26-pub@acm.org">apsys26-pub@acm.org</a>).</p>
+
+<h1 id="use-of-artificial-intelligence">Use of Artificial Intelligence</h1>
 
 <p>Authors must not submit papers produced entirely or substantially by generative AI. However, the use of AI tools
   for editing and improving the grammar or clarity of authors' own human-written text is permitted. For any
   questions regarding the appropriate use of generative AI, please contact the program chairs.</p>
+
+<p>The ACM Policy on Authorship regarding the use of generative AI tools was updated in May 2026, after the APSys
+  2026 submission deadline. Authors of accepted papers must therefore make sure, as part of the camera-ready
+  version, that their paper meets the disclosure requirements of the updated policy, which is reproduced in full
+  below:</p>
+
+<blockquote class="policy-quote">
+  <p><strong>Use of Artificial Intelligence</strong></p>
+
+  <p>Over the past few years, the computing community's use of large language models to support research and
+    authorship has evolved rapidly, becoming a mainstream practice. ACM embraces any new technologies that have the
+    potential to improve the efficiency and productivity of the research enterprise and assist with the authorship
+    process.</p>
+
+  <p>At the same time, the use of such technologies, especially when in their infancy, introduces significant risks,
+    including the risk of text and idea plagiarism, the potential for factual inaccuracies, fabricated or
+    unverifiable research artifacts and citations, and the unintentional propagation of bias. These concerns raise
+    questions about transparency, attribution, trust in scientific results, and the integrity of the scholarly
+    record, underscoring the need for clear standards and responsible use of these technologies.</p>
+
+  <p>However, as with the use of any technology, especially new technology, it is incumbent upon the user of that
+    technology to ensure its responsible use, and to be accountable for the misuse of that technology.</p>
+
+  <p>Rather than attempt to limit the use of Artificial Intelligence (AI) to conduct research or report on the
+    results of that research by placing expectations on authors to disclose all uses of large language models in
+    their Works, this updated Policy attempts to set clear expectations for their responsible use, as follows:</p>
+
+  <ol>
+    <li>When using Artificial Intelligence to conduct research, including the design and methodology of the research
+      project, creation and selection of data sources, designing experiments, generation and collection of data,
+      coding, implementing models, running simulations, data analysis, testing, validating results, deploying
+      software, archiving data and code for reproducibility, or any other aspects of the research lifecycle that are
+      directly relevant to the conclusions of the research underlying the Work, the specific use(s) of AI tools must
+      be described in detail in the methods section of the Work. This includes the creation of artifacts that are
+      directly relevant to the conclusions of the research, such as code, datasets, and charts or figures that rely
+      on the AI tools.</li>
+    <li>When using Artificial Intelligence to assist with writing an ACM submission, ACM no longer requires the
+      disclosure of information regarding the use of AI (as distinct from AI used in the conduct of the research
+      itself, addressed in item 1 above).</li>
+    <li>All named authors on an ACM submission will be held responsible and accountable for any problematic content
+      contained in the submission regardless of the source of that problematic content:
+      <ul>
+        <li>In the event content integrity issues stemming from the use of AI during authorship are identified prior
+          to publication or posting in the ACM Digital Library, ACM reserves the right to reject submissions in
+          their entirety and impose additional penalties.</li>
+        <li>In the event content integrity issues stemming from the use of AI during authorship are identified after
+          publication or posting in the ACM Digital Library, ACM reserves the right to retract the published Work in
+          its entirety.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>A retraction notice will be published on the citation page of the published Work, indicating the Work has been
+    retracted because of integrity issues identified after publication, including the inclusion of fraudulent
+    material. ACM may or may not include any reference to the use of Artificial Intelligence in the retraction
+    notice.</p>
+
+  <p>Further details regarding the interpretation of ACM's policy on the use of AI tools and illustrative examples
+    are provided in the
+    <a href="https://www.acm.org/publications/policies/frequently-asked-questions">FAQs</a>.</p>
+</blockquote>
 
 <h1 id="new-open-access-policy">ACM's New Open Access Policy</h1>
 

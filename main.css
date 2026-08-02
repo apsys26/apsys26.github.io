@@ -773,3 +773,11 @@ a:visited {
   font-size: 16px;
   letter-spacing: -1px;
 }
+
+/* Long verbatim policy quotations (e.g. the ACM AI policy) */
+blockquote.policy-quote {
+  color: #424242;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: normal;
+}
