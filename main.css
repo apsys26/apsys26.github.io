@@ -781,3 +781,10 @@ blockquote.policy-quote {
   font-style: normal;
   letter-spacing: normal;
 }
+
+/* Superseded deadlines, kept visible as struck-through text */
+del.old-date {
+  color: #888;
+  font-weight: normal;
+  text-decoration: line-through;
+}
