@@ -85,6 +85,8 @@
   }
   .reg-note.info .reg-note-heading{ color:#002E60; }
   .reg-note.warn .reg-note-heading{ color:#8a6d00; }
+  /* keep superseded dates in the note headings tinted with the heading colour */
+  .reg-note-heading del.old-date{ color:inherit; opacity:0.6; }
   .reg-cta{
     text-align:center;
     margin:24px 0 8px;
@@ -160,13 +162,13 @@
 <h1 id="accommodation">Accommodation</h1>
 
 <div class="reg-note warn">
-  <div class="reg-note-heading">Important &mdash; book by August 20, 2026</div>
+  <div class="reg-note-heading">Important &mdash; book by <del class="old-date">August 20, 2026</del> September 3, 2026</div>
   <p>APSys 2026 has secured a special room rate for attendees. To receive the negotiated rate and
     help organizers manage the room block, please book through the official reservation form below.
     We strongly encourage early booking, as rooms are limited and the special rate is guaranteed
     only until the stated deadline. Your support helps us meet our hotel commitment and deliver a
     smooth conference experience for all participants.</p>
-  <p>The cut-off date for the room block is <b>Thursday, August 20, 2026</b>. Rates, room types and
+  <p>The cut-off date for the room block is <del class="old-date">Thursday, August 20, 2026</del> <b>Thursday, September 3, 2026</b>. Rates, room types and
     the reservation form are available on the <a href="./hotel.html">conference hotel page</a>.</p>
   <p><a class="btn-link" href="https://app.marriott.com/reslink?id=1776324366880&amp;key=GRP&amp;app=resvlink" target="_blank">Reservation Form</a></p>
 </div>
