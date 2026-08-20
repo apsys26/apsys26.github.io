@@ -788,3 +788,102 @@ del.old-date {
   font-weight: normal;
   text-decoration: line-through;
 }
+
+/**
+ * Sponsors (used by sponsors.html and the Sponsors section on index.html)
+ */
+.sponsor-tba {
+  text-align: center;
+  color: #828282;
+  font-style: italic;
+  padding: 24px 0;
+  font-size: 16px;
+}
+
+.sponsor-tier-heading {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  color: #002E60;
+}
+
+.sponsor-divider {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 24px 0;
+}
+
+.sponsor-cta {
+  background: #f4f8ff;
+  border: 1px solid #c8daf5;
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+
+.sponsor-cta p {
+  margin-bottom: 12px;
+}
+
+.sponsor-cta p:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid of sponsor logos within one tier */
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 24px 0 8px;
+}
+
+.sponsor-logo {
+  display: block;
+  padding: 8px 16px;
+}
+
+.sponsor-logo:hover {
+  text-decoration: none;
+}
+
+.sponsor-logo img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Logo sizes scale with the tier */
+.sponsor-logo-diamond img {
+  width: 340px;
+}
+
+.sponsor-logo-platinum img {
+  width: 280px;
+}
+
+.sponsor-logo-gold img {
+  width: 230px;
+}
+
+.sponsor-logo-silver img {
+  width: 190px;
+}
+
+/* Link to the full sponsors page, shown under the index teaser */
+.sponsor-more {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .sponsor-grid {
+    gap: 20px;
+  }
+
+  .sponsor-logo-diamond img {
+    width: 260px;
+  }
+}
