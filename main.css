@@ -800,13 +800,6 @@ del.old-date {
   font-size: 16px;
 }
 
-.sponsor-tier-heading {
-  text-align: center;
-  margin-top: 32px;
-  margin-bottom: 8px;
-  color: #002E60;
-}
-
 .sponsor-divider {
   border: none;
   border-top: 1px solid #e8e8e8;
@@ -852,23 +845,12 @@ del.old-date {
   display: block;
   height: auto;
   max-width: 100%;
-}
-
-/* Logo sizes scale with the tier */
-.sponsor-logo-diamond img {
-  width: 340px;
-}
-
-.sponsor-logo-platinum img {
-  width: 280px;
-}
-
-.sponsor-logo-gold img {
   width: 230px;
 }
 
-.sponsor-logo-silver img {
-  width: 190px;
+/* The lead sponsor is shown larger than the rest */
+.sponsor-logo-lead img {
+  width: 340px;
 }
 
 /* Link to the full sponsors page, shown under the index teaser */
@@ -883,7 +865,7 @@ del.old-date {
     gap: 20px;
   }
 
-  .sponsor-logo-diamond img {
+  .sponsor-logo-lead img {
     width: 260px;
   }
 }
