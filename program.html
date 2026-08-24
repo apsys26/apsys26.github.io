@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APSys 2026</title>
+<meta name="description" content="Technical program of the 17th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2026), Bangkok, Thailand, September 17-18, 2026.">
+<link rel="stylesheet" href="./main.css">
+<link rel="canonical" href="https://apsys26.github.io">
+<link rel="alternate" type="application/rss+xml" title="17th ACM SIGOPS Asia-Pacific Workshop on Systems (APSys 2026)">
+</head>
+
+
+<body>
+
+<header class="site-header">
+<a class="nav-logo" href="./index.html">
+<img src="./images/apsys26_logo_h_full_400x200.png" alt="APSys 2026 Logo">
+</a>
+  <a class="site-title" href="./index.html">17th ACM SIGOPS Asia-Pacific Workshop on Systems</a>
+    <p style="text-align:center"><font size="4">September 17-18, 2026<br>Bangkok, Thailand</font></p>
+
+    <nav class="site-nav">
+      <div class="trigger">
+        <div class="dropdown">
+          <a class="page-link dropdown-toggle" href="#">Calls &#9662;</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./call_for_papers.html">Call for Papers</a>
+            <a class="dropdown-item" href="./call_for_posters.html">Call for Posters</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="page-link dropdown-toggle" href="#">Committee &#9662;</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./organization.html">Organization Committee</a>
+            <a class="dropdown-item" href="./program_committee.html">Program Committee</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="page-link dropdown-toggle" href="#">Program &#9662;</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./program.html">Program</a>
+            <a class="dropdown-item" href="./accepted_papers.html">Accepted Papers</a>
+            <a class="dropdown-item" href="./accepted_posters.html">Accepted Posters</a>
+          </div>
+        </div>
+        <a class="page-link" href="./registration.html">Registration</a>
+        <a class="page-link" href="./hotel.html">Venue</a>
+        <a class="page-link" href="./sponsors.html">Sponsors</a>
+        <a class="page-link" href="./past.html">Past</a>
+      </div>
+    </nav>
+ <div id="banner"></div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+
+<div class="wrapper-main">
+
+  <style>
+    .program{
+      --text:#111827; --muted:#4d525c; --line:#e5e7eb;
+      --navy:#002E60; --paper-bg:#e6edf5;
+      --poster:#B5651D; --poster-bg:#f7ead9;
+      --timew:104px;
+    }
+
+    .program{max-width:1000px;margin:0 auto;padding:0;font:400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;color:var(--text)}
+    .program h1{font-size:32px;margin:8px 0 12px}
+
+    /* Date bands */
+    .p-date{background:var(--navy);color:#fff;text-align:center;font-weight:600;
+      letter-spacing:.02em;padding:7px 10px;margin:22px 0 12px;border-radius:4px}
+    .p-date:first-child{margin-top:14px}
+
+    /* Sections: unified 2-col grid; a note adds a second row */
+    .p-section{
+      background:var(--paper-bg);
+      border-left:4px solid var(--navy);
+      padding:6px 10px;
+      margin:8px 0;
+      font-weight:600;
+      color:var(--navy);
+
+      display:grid;
+      grid-template-columns: var(--timew) 1fr;
+      column-gap:5px;
+      align-items:center;
+    }
+    .p-section .time{
+      font-weight:700;
+      display:flex; align-items:center; justify-content:flex-start;
+      white-space:nowrap; line-height:1.3;
+      padding-right:6px;
+      box-sizing:border-box;
+    }
+    .p-section .titleline{ display:inline-block; }
+
+    /* Poster sessions pick up the site's poster colour */
+    .p-section.poster{ background:var(--poster-bg); border-left-color:var(--poster); color:var(--poster); }
+
+    /* Sub-note under the title */
+    .p-submeta{ font-size:14px; line-height:1.45; color:var(--muted); font-weight:400; margin-top:3px; }
+    .p-section.withmeta{ grid-template-rows:auto auto; }
+    .p-section.withmeta .time.vspan{ grid-row:1 / span 2; align-items:flex-start; padding-top:2px; }
+
+    /* Break line between days */
+    .p-section.breakline{ background:none; border:none; padding:0; margin:26px 0; display:block; }
+    .p-section.breakline hr{ border:0; border-top:1px solid var(--line); margin:0; }
+
+    /* Talks, keynotes and posters share the time column */
+    .p-list{
+      display:grid;
+      grid-template-columns: var(--timew) 1fr;
+      gap:6px 14px;
+      margin:6px 0;
+      align-items:start;
+    }
+    .p-time{
+      font-weight:600; color:#111;
+      text-align:left;
+      white-space:nowrap; line-height:1.6;
+      padding-right:6px;
+      box-sizing:border-box;
+    }
+    .p-talk{padding:2px 0 6px}
+    .p-title{font-weight:700;margin:0 0 2px 0}
+    .p-auth{color:#374151;margin-top:3px;font-size:15px}
+    .p-auth .a-name{font-style:italic; color:#1a56db;}
+    .p-auth .a-affil{color:#555}
+    .p-meta{color:var(--muted);margin-top:3px;font-size:15px}
+
+    /* Keynote card */
+    .p-keynote{border:1px solid var(--line);border-radius:4px;padding:8px 10px;background:#fff;margin:6px 0}
+
+    @media (max-width:620px){
+      .program{--timew:84px}
+      .program h1{font-size:26px}
+      .p-list, .p-section{column-gap:8px}
+    }
+
+    /* Print */
+    @media print{
+      @page{size:A4;margin:10mm}
+      body{margin:0}
+      .program{padding:0 4mm;font-size:12px}
+      .site-nav, #banner{display:none}
+      .p-list{break-inside:avoid}
+    }
+  </style>
+
+
+    <section class="program" id="program">
+    <h1>Program</h1>
+    <div id="program-root"></div>
+    </section>
+
+
+  <script>
+const SCHEDULE = [
+ {
+  "type": "date",
+  "text": "Day 1 &mdash; Thursday, September 17, 2026"
+ },
+ {
+  "type": "section",
+  "time": "8:00–8:45",
+  "title": "Registration"
+ },
+ {
+  "type": "section",
+  "time": "8:45–9:00",
+  "title": "Opening Remarks"
+ },
+ {
+  "type": "section",
+  "time": "9:00–10:00",
+  "title": "Keynote"
+ },
+ {
+  "type": "keynote",
+  "title": "Keynote title to be announced",
+  "authors": [
+   "Jason Xue (MBZUAI)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "10:00–10:30",
+  "title": "Coffee Break"
+ },
+ {
+  "type": "section",
+  "time": "10:30–11:50",
+  "title": "Session 1: Operating Systems, Serverless, and Storage"
+ },
+ {
+  "type": "talk",
+  "title": "CSOPESY: A C++ OS Emulator for Teaching Multi-Core Scheduling and Demand Paging",
+  "authors": [
+   "Neil Patrick Del Gallego, Emerico Aguilar (De La Salle University)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "Towards High-Performance eBPF-based OS Scheduling for Serverless Functions",
+  "authors": [
+   "Saman Akbari (TU Berlin)",
+   "Manfred Hauswirth (Fraunhofer Institute for Open Communication Systems, TU Berlin)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "FunPilot: Runtime Performance Diagnosis and Remediation for Serverless Applications with LLMs",
+  "authors": [
+   "Changyuan Lin (University of British Columbia)",
+   "Yawen Wang (Google)",
+   "Mohammad Shahrad (University of British Columbia)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "SpongeFS: A Criticality-Aware File System for Dependency-Safe Space Reclamation",
+  "authors": [
+   "Shuyun Gui, Yifan Zhao, Mingkai Dong (Shanghai Jiao Tong University)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "11:50–1:20",
+  "title": "Lunch"
+ },
+ {
+  "type": "section",
+  "time": "1:20–2:20",
+  "title": "Session 2: LLM Serving Systems"
+ },
+ {
+  "type": "talk",
+  "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+  "authors": [
+   "Rui Zhang, Chaeeun Kim, Cheng-Wei Ching, Yi Zhong, Liting Hu (University of California, Santa Cruz)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "Congestion-Aware Serving of LLM Applications",
+  "authors": [
+   "Mouheb Ben Nasr, Muhammad Bilal, Alessandro Cornacchia, Boris Radovic, Marco Canini (KAUST)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson",
+  "authors": [
+   "Teng Mei, Chengxuan Pei (The Chinese University of Hong Kong, Shenzhen)",
+   "Marco Canini (KAUST)",
+   "Yunming Xiao (The Chinese University of Hong Kong, Shenzhen)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "2:20–3:00",
+  "title": "Session 3: Systems Security"
+ },
+ {
+  "type": "talk",
+  "title": "XTLS: Scalable TLS Offloading through Host-SmartNIC Stack Co-Design",
+  "authors": [
+   "Seongjong Bae, Junghan Yoon, KyoungSoo Park (Seoul National University)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "BACKPAC: Breaking ARM’s Pointer Authentication Sidechannel Mitigation in Apple M2",
+  "authors": [
+   "Yongjun Han, Dae R. Jeong (Seoul National University)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "3:00–3:30",
+  "title": "Coffee Break",
+  "note": "Served in the poster area."
+ },
+ {
+  "type": "section",
+  "time": "3:00–4:30",
+  "title": "Poster Session I",
+  "poster": true,
+  "anchor": "poster-session-1",
+  "note": "All nine Day&nbsp;1 papers are presented as posters, alongside the seven accepted posters below."
+ },
+ {
+  "type": "poster",
+  "title": "Dissecting Attention Kernel Performance across GPUs and Workloads",
+  "authors": [
+   "Gihyun Park, Jiwon Soh, Jiwon Seo (Seoul National University)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Towards Text-Guided Navigation World Models",
+  "authors": [
+   "Kun Kwak, Wookyung Lee (Soongsil University)",
+   "Dahuin Jung (Chung-Ang University)",
+   "Eunji Lee (Soongsil University)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Toward Hardening VirtIO Drivers for Confidential VMs with a Rust-based DSL",
+  "authors": [
+   "Lianjie Wang, Takahiro Shinagawa (The University of Tokyo)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Augur: Similarity-Enabled Sparse I/O for Efficient Prefix-KV Inference",
+  "authors": [
+   "Jing Zou (University of Electronic Science and Technology of China)",
+   "Shangyu Wu (MBZUAI)",
+   "Hancong Duan (University of Electronic Science and Technology of China)",
+   "Qiao Li, Chun Jason Xue (MBZUAI)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Toward SmartNIC-Based L7 Load Balancing with TOE and Pod Steering",
+  "authors": [
+   "Yuma Ueda (Keio University, National Institute of Advanced Industrial Science and Technology)",
+   "Takaaki Fukai (National Institute of Advanced Industrial Science and Technology)",
+   "Ryuichi Sakamoto (Institute of Science Tokyo)",
+   "Takahiro Hirofuchi (National Institute of Advanced Industrial Science and Technology)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Blockdrive: A Secure, Transparent, and Zero Web3 Friction n-Tier Architecture for Verifiable Credentials",
+  "authors": [
+   "Warit Lekmuenwai (Kasetsart University)",
+   "Wasuwee Sodsong (Fufong Labs)",
+   "Sukumal Kitisin (Kasetsart University)"
+  ]
+ },
+ {
+  "type": "poster",
+  "title": "Stage Co-execution for Multimodal Model Serving",
+  "authors": [
+   "Hoonseo Choi (Seoul National University)",
+   "Sungkyun Kim (Hanyang University)",
+   "Jiwon Seo (Seoul National University)"
+  ]
+ },
+ {
+  "type": "section",
+  "breakline": true
+ },
+ {
+  "type": "date",
+  "text": "Day 2 &mdash; Friday, September 18, 2026"
+ },
+ {
+  "type": "section",
+  "time": "8:30–9:00",
+  "title": "Registration"
+ },
+ {
+  "type": "section",
+  "time": "9:00–10:00",
+  "title": "Session 4: Distributed Systems and Cluster Infrastructure"
+ },
+ {
+  "type": "talk",
+  "title": "SSR: Synchronous State Machine Replication with a Split Architecture",
+  "authors": [
+   "Yuke Ma (Max Planck Institute for Informatics)",
+   "Paolo Costa (Microsoft Research)",
+   "Yiting Xia (Max Planck Institute for Informatics)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "BigBFT: Scaling BFT without Compromising Fault Tolerance via State Sharding",
+  "authors": [
+   "Guangda Sun, Jialin Li (National University of Singapore)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "Ossim: OS-Driven Live Simulation for Cluster-Scale Full-Stack Evaluation",
+  "authors": [
+   "Yiliang Wan, Haifeng Sun, Yihan Yang (National University of Singapore)",
+   "Jonas Kaufmann, Antoine Kaufmann (Max Planck Institute for Software Systems)",
+   "Jialin Li (National University of Singapore)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "10:00–10:30",
+  "title": "Coffee Break"
+ },
+ {
+  "type": "section",
+  "time": "10:30–11:50",
+  "title": "Session 5: Networked Systems"
+ },
+ {
+  "type": "talk",
+  "title": "Can Software-based Transport Perform Like RDMA?",
+  "authors": [
+   "Yonghwan Chung (Seoul National University)",
+   "Yihan Dang (Xi'an Jiaotong University)",
+   "Kyoungsoo Park (Seoul National University)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "PDUMint: A Case for PDU-Aware, In-network Packet Layout Translation",
+  "authors": [
+   "Jongki Park, Junghan Yoon, SeungYeon Shin, Jonghyeon Park, KyoungSoo Park (Seoul National University)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "NetLoom: Accelerating the Construction for Large-Scale Network Emulation on a Single Host",
+  "authors": [
+   "Minuo Jiang (Computer Network Information Center, CAS and University of Chinese Academy of Sciences)",
+   "Xian Yu (Computer Network Information Center, CAS)",
+   "Kaifei Peng (Computer Network Information Center, CAS and University of Chinese Academy of Sciences)",
+   "Dongbiao He (Southeast University)",
+   "Yanbiao Li (Computer Network Information Center, CAS and University of Chinese Academy of Sciences)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "Tuning Optical Modulation at Floating-Point Bit Granularity for Approximate MPI Communication",
+  "authors": [
+   "Shoichi Hirasawa, Michihiro Koibuchi (National Institute of Informatics)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "11:50–1:30",
+  "title": "Lunch"
+ },
+ {
+  "type": "section",
+  "time": "1:30–2:30",
+  "title": "Session 6: GPU and ML Infrastructure"
+ },
+ {
+  "type": "talk",
+  "title": "Unlocking Software-defined GPU Fabric Scheduling in the LLM Era",
+  "authors": [
+   "Danyang Chen (The Chinese University of Hong Kong, Shenzhen)",
+   "Yufeng Gu, Yibo Huang (University of Michigan)",
+   "Chengxuan Pei, Peichun Hua (The Chinese University of Hong Kong, Shenzhen)",
+   "Yang Zhou (UC Davis)",
+   "Yunming Xiao (The Chinese University of Hong Kong, Shenzhen)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "LiveResize: Runtime Dynamic GPU Reallocation for LLM Post-Training",
+  "authors": [
+   "Hanlin Du, Zhiyuan Yan (Institute of Computing Technology, CAS)",
+   "Haiquan Chen, Jiarui Fang (ByteDance)",
+   "Yungang Bao, Sa Wang (Institute of Computing Technology, CAS)"
+  ]
+ },
+ {
+  "type": "talk",
+  "title": "FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure",
+  "authors": [
+   "Harish S A, Vignesh S (Indian Institute of Technology Hyderabad)",
+   "Ashwin Kurella, Rohan Gandhi (Microsoft Research, India)",
+   "Praveen Tammana (Indian Institute of Technology Hyderabad)"
+  ]
+ },
+ {
+  "type": "section",
+  "time": "2:30–2:45",
+  "title": "Concluding Remarks"
+ },
+ {
+  "type": "section",
+  "time": "2:45–3:15",
+  "title": "Coffee Break",
+  "note": "Served in the poster area."
+ },
+ {
+  "type": "section",
+  "time": "2:45–4:15",
+  "title": "Poster Session II",
+  "poster": true,
+  "anchor": "poster-session-2",
+  "note": "All ten Day&nbsp;2 papers are presented as posters. The same seven accepted posters are up again &mdash; see <a href=\"#poster-session-1\">Poster Session&nbsp;I</a> for the list."
+ }
+];
+
+const root=document.getElementById('program-root');
+const el=(tag,a={},kids=[])=>{const n=document.createElement(tag);for(const[k,v]of Object.entries(a)){if(k==='class')n.className=v;else if(k==='html')n.innerHTML=v;else n.setAttribute(k,v);}for(const c of kids){if(typeof c==='string')n.appendChild(document.createTextNode(c));else if(c)n.appendChild(c);}return n;};
+
+function dateBand({text}){return el('div',{class:'p-date',html:text});}
+
+function section({time, title, note, breakline, poster, anchor}){
+  if (breakline){
+    return el('div',{class:'p-section breakline'},[el('hr')]);
+  }
+  const attrs = {class:['p-section', poster?'poster':'', note?'withmeta':''].filter(Boolean).join(' ')};
+  if (anchor) attrs.id = anchor;
+
+  if (note){
+    return el('div',attrs,[
+      el('span',{class:'time vspan'},[time || '']),
+      el('div',{class:'titleline'},[title]),
+      el('div',{class:'p-submeta',html:note})
+    ]);
+  }
+  return el('div',attrs,[
+    el('span',{class:'time'},[time || '']),
+    el('div',{class:'titleline'},[title])
+  ]);
+}
+
+function renderAuthors(list){
+  const wrap = el('div',{class:'p-auth'});
+  (list||[]).forEach((a,i)=>{
+    const s = String(a);
+    const idx = s.lastIndexOf('(');
+    const name = idx>0 ? s.slice(0,idx).trim() : s.trim();
+    const aff = (idx>0 && s.endsWith(')')) ? s.slice(idx+1,-1).trim() : '';
+    wrap.appendChild(el('span',{class:'author'},[
+      el('span',{class:'a-name'},[name]),
+      aff? ' ' : '',
+      aff? el('span',{class:'a-affil'},['('+aff+')']): null
+    ]));
+    if(i < list.length-1) wrap.appendChild(document.createTextNode('; '));
+  });
+  return wrap;
+}
+
+function talk({title,authors=[]}){
+  return el('div',{class:'p-list'},[
+    el('div',{class:'p-time'},['']),
+    el('div',{class:'p-talk'},[
+      el('div',{class:'p-title'},[title]),
+      authors.length? renderAuthors(authors): null
+    ])
+  ]);
+}
+
+function keynote({title,authors=[],link}){
+  return el('div',{class:'p-list'},[
+    el('div',{class:'p-time'},['']),
+    el('div',{class:'p-talk'},[
+      el('div',{class:'p-title'},[title]),
+      authors.length? renderAuthors(authors): null,
+      link? el('div',{class:'p-meta',html:'<a href="'+link.href+'">'+link.text+'</a>'}): null
+    ])
+  ]);
+}
+
+function posterItem({title,authors=[]}){
+  return el('div',{class:'p-list'},[
+    el('div',{class:'p-time'},['']),
+    el('div',{class:'p-talk'},[
+      el('div',{class:'p-title'},[title]),
+      authors.length? renderAuthors(authors): null
+    ])
+  ]);
+}
+
+for(const it of SCHEDULE){
+  switch(it.type){
+    case 'date': root.appendChild(dateBand(it)); break;
+    case 'section': root.appendChild(section(it)); break;
+    case 'talk': root.appendChild(talk(it)); break;
+    case 'keynote': root.appendChild(keynote(it)); break;
+    case 'poster': root.appendChild(posterItem(it)); break;
+  }
+}
+  </script>
+
+</div>
+<footer class="site-footer">
+</footer>
+</body></html>
