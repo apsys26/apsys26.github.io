@@ -42,6 +42,7 @@
           <a class="page-link dropdown-toggle" href="#">Program &#9662;</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="./program.html">Program</a>
+            <a class="dropdown-item" href="./keynote.html">Keynote</a>
             <a class="dropdown-item" href="./accepted_papers.html">Accepted Papers</a>
             <a class="dropdown-item" href="./accepted_posters.html">Accepted Posters</a>
           </div>
@@ -128,6 +129,8 @@
     }
     .p-talk{padding:2px 0 6px}
     .p-title{font-weight:700;margin:0 0 2px 0}
+    .p-title a{color:var(--navy);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+    .p-title a:hover{color:#111}
     .p-auth{color:#374151;margin-top:3px;font-size:15px}
     .p-auth .a-name{font-style:italic; color:#1a56db;}
     .p-auth .a-affil{color:#555}
@@ -182,9 +185,10 @@ const SCHEDULE = [
  },
  {
   "type": "keynote",
-  "title": "Keynote title to be announced",
+  "title": "Unlocking the Full Potential of 3D NAND Flash",
+  "href": "./keynote.html",
   "authors": [
-   "Jason Xue (MBZUAI)"
+   "Chun Jason Xue (MBZUAI)"
   ]
  },
  {
@@ -554,13 +558,14 @@ function talk({title,authors=[]}){
   ]);
 }
 
-function keynote({title,authors=[],link}){
+function keynote({title,authors=[],href}){
   return el('div',{class:'p-list'},[
     el('div',{class:'p-time'},['']),
     el('div',{class:'p-talk'},[
-      el('div',{class:'p-title'},[title]),
-      authors.length? renderAuthors(authors): null,
-      link? el('div',{class:'p-meta',html:'<a href="'+link.href+'">'+link.text+'</a>'}): null
+      el('div',{class:'p-title'},[
+        href? el('a',{href:href},[title]) : title
+      ]),
+      authors.length? renderAuthors(authors): null
     ])
   ]);
 }
