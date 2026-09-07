@@ -829,7 +829,46 @@ del.old-date {
   justify-content: center;
   align-items: center;
   gap: 32px;
-  margin: 24px 0 8px;
+  margin: 18px 0 8px;
+}
+
+/* Tier label: a small chip centred above its grid. The tiers are named after
+   metals, so each is tinted accordingly rather than sharing one flat colour;
+   the generous space above and tight space below tie a label to its own logos. */
+.sponsor-tier {
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin: 44px auto 6px;
+  padding: 8px 22px;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Bronze reuses the copper accent the home page already uses for posters;
+   gold and silver take a warm yellow and a cool grey, so each tier reads as
+   its own metal. */
+.sponsor-tier-gold {
+  color: #8a6d0f;
+  background: #fcf5dc;
+  border-color: #e6d494;
+}
+
+.sponsor-tier-silver {
+  color: #56606d;
+  background: #eef1f5;
+  border-color: #c4ccd6;
+}
+
+.sponsor-tier-bronze {
+  color: #B5651D;
+  background: #f7ead9;
+  border-color: #ddb185;
 }
 
 .sponsor-logo {
@@ -841,16 +880,33 @@ del.old-date {
   text-decoration: none;
 }
 
+/* Logos are fitted inside a per-tier box rather than given a fixed width. The
+   logos differ wildly in proportion — a 3.2:1 wordmark next to near-square
+   lockups — so a shared width would make the square ones tower over the wide
+   ones and invert the tier order. Capping both dimensions keeps the rendered
+   heights descending (gold 120px, silver 105px, bronze 88px) whatever shape a
+   future sponsor's logo turns out to be. */
 .sponsor-logo img {
   display: block;
+  width: auto;
   height: auto;
-  max-width: 100%;
-  width: 230px;
+  max-width: 230px;
+  max-height: 105px;
 }
 
-/* The lead sponsor is shown larger than the rest */
-.sponsor-logo-lead img {
-  width: 340px;
+.sponsor-logo-gold img {
+  max-width: 380px;
+  max-height: 150px;
+}
+
+.sponsor-logo-silver img {
+  max-width: 280px;
+  max-height: 105px;
+}
+
+.sponsor-logo-bronze img {
+  max-width: 220px;
+  max-height: 88px;
 }
 
 /* Link to the full sponsors page, shown under the index teaser */
@@ -865,7 +921,18 @@ del.old-date {
     gap: 20px;
   }
 
-  .sponsor-logo-lead img {
-    width: 260px;
+  .sponsor-logo-gold img {
+    max-width: 270px;
+    max-height: 115px;
+  }
+
+  .sponsor-logo-silver img {
+    max-width: 210px;
+    max-height: 92px;
+  }
+
+  .sponsor-logo-bronze img {
+    max-width: 165px;
+    max-height: 78px;
   }
 }
