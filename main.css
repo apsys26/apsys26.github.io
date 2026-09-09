@@ -827,7 +827,7 @@ del.old-date {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 32px;
   margin: 18px 0 8px;
 }
@@ -871,13 +871,33 @@ del.old-date {
   border-color: #ddb185;
 }
 
+/* One cell = one link, stacking the logo above the sponsor's name. The grid
+   bottom-aligns its cells so these names line up across a row even when the
+   logos above them differ in height. */
 .sponsor-logo {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   padding: 8px 16px;
 }
 
 .sponsor-logo:hover {
   text-decoration: none;
+}
+
+.sponsor-name {
+  max-width: 210px;
+  color: #444;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.sponsor-logo:hover .sponsor-name {
+  color: #002E60;
+  text-decoration: underline;
 }
 
 /* Logos are fitted inside a per-tier box rather than given a fixed width. The
@@ -919,6 +939,11 @@ del.old-date {
 @media screen and (max-width: 600px) {
   .sponsor-grid {
     gap: 20px;
+  }
+
+  .sponsor-name {
+    max-width: 160px;
+    font-size: 12px;
   }
 
   .sponsor-logo-gold img {
