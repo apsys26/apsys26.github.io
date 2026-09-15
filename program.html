@@ -321,6 +321,7 @@ const SCHEDULE = [
  {
   "type": "poster",
   "title": "Towards Text-Guided Navigation World Models",
+  "href": "./posters/kwak-poster-2.pdf",
   "authors": [
    "Kun Kwak, Wookyung Lee (Soongsil University)",
    "Dahuin Jung (Choongang University)",
@@ -330,6 +331,7 @@ const SCHEDULE = [
  {
   "type": "poster",
   "title": "Toward Hardening VirtIO Drivers for Confidential VMs with a Rust-based DSL",
+  "href": "./posters/wang-poster-3.pdf",
   "authors": [
    "Lianjie Wang, Takahiro Shinagawa (University of Tokyo)"
   ]
@@ -337,6 +339,7 @@ const SCHEDULE = [
  {
   "type": "poster",
   "title": "Augur: Similarity-Enabled Sparse I/O for Efficient Prefix-KV Inference",
+  "href": "./posters/zou-poster-4.pdf",
   "authors": [
    "Jing Zou (University of Electronic Science and Technology of China)",
    "Shangyu Wu (MBZUAI)",
@@ -347,6 +350,7 @@ const SCHEDULE = [
  {
   "type": "poster",
   "title": "Toward SmartNIC-Based L7 Load Balancing with TOE and Pod Steering",
+  "href": "./posters/ueda-poster-5.pdf",
   "authors": [
    "Yuma Ueda (Keio University, National Institute of Advanced Industrial Science and Technology)",
    "Takaaki Fukai (National Institute of Advanced Industrial Science and Technology)",
@@ -357,6 +361,7 @@ const SCHEDULE = [
  {
   "type": "poster",
   "title": "Blockdrive: A Secure, Transparent, and Zero Web3 Friction n-Tier Architecture for Verifiable Credentials",
+  "href": "./posters/lekmuenwai-poster-6.pdf",
   "authors": [
    "Warit Lekmuenwai (Kasetsart University)",
    "Wasuwee Sodsong (Fufong Labs)",
@@ -585,11 +590,13 @@ function keynote({title,authors=[],href}){
   ]);
 }
 
-function posterItem({title,authors=[]}){
+function posterItem({title,authors=[],href}){
   return el('div',{class:'p-list'},[
     el('div',{class:'p-time'},['']),
     el('div',{class:'p-talk'},[
-      el('div',{class:'p-title'},[title]),
+      el('div',{class:'p-title'},[
+        href? el('a',{href:href},[title]) : title
+      ]),
       authors.length? renderAuthors(authors): null
     ])
   ]);
