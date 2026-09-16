@@ -79,6 +79,25 @@
     .program{max-width:1000px;margin:0 auto;padding:0;font:400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;color:var(--text)}
     .program h1{font-size:32px;margin:8px 0 12px}
 
+    /* Where it all happens */
+    .p-venue{
+      background:var(--paper-bg);
+      border-left:4px solid var(--navy);
+      border-radius:4px;
+      padding:10px 14px;
+      margin:0 0 6px;
+      font-size:15px;
+      line-height:1.5;
+      color:#333;
+    }
+    .p-venue strong{ color:var(--navy); }
+    .p-venue .p-venue-access{
+      display:block;
+      font-size:14px;
+      color:var(--muted);
+      margin-top:3px;
+    }
+
     /* Date bands */
     .p-date{background:var(--navy);color:#fff;text-align:center;font-weight:600;
       letter-spacing:.02em;padding:7px 10px;margin:22px 0 12px;border-radius:4px}
@@ -165,6 +184,14 @@
 
     <section class="program" id="program">
     <h1>Program</h1>
+    <p class="p-venue">
+      Registration, all sessions, the coffee breaks and the poster sessions are in
+      <strong>The Sala Thai &mdash; Ballroom</strong>, on the 5th floor of the
+      <a href="./hotel.html">Bangkok Marriott Marquis Queen&rsquo;s Park</a>.
+      <span class="p-venue-access">Take the north or south tower elevator to the 4th floor and the
+      escalator up one more, or the escalators behind the ground-floor concierge desk straight up
+      to the 5th &mdash; <a href="./hotel.html#workshop-location">full directions</a>.</span>
+    </p>
     <div id="program-root"></div>
     </section>
 
