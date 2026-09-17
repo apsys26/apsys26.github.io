@@ -157,6 +157,21 @@
     .p-title{font-weight:700;margin:0 0 2px 0}
     .p-title a{color:var(--navy);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
     .p-title a:hover{color:#111}
+    /* Award badge, sharing the gold of .sponsor-tier-gold */
+    .p-award{
+      display:inline-block;
+      margin-left:8px;
+      vertical-align:2px;
+      font-size:12px;
+      font-weight:700;
+      color:#8a6d0f;
+      background:#fcf5dc;
+      border:1px solid #e6d494;
+      border-radius:3px;
+      padding:1px 6px;
+      white-space:nowrap;
+    }
+
     .p-auth{color:#374151;margin-top:3px;font-size:15px}
     .p-auth .a-name{font-style:italic; color:#1a56db;}
     .p-auth .a-affil{color:#555}
@@ -472,6 +487,7 @@ const SCHEDULE = [
  {
   "type": "talk",
   "title": "PDUMint: A Case for PDU-Aware, In-network Packet Layout Translation",
+  "award": "Best paper award",
   "authors": [
    "Jongki Park, Junghan Yoon, SeungYeon Shin, Jonghyeon Park, KyoungSoo Park (Seoul National University)"
   ]
@@ -596,11 +612,14 @@ function renderAuthors(list){
   return wrap;
 }
 
-function talk({title,authors=[]}){
+function talk({title,authors=[],award}){
   return el('div',{class:'p-list'},[
     el('div',{class:'p-time'},['']),
     el('div',{class:'p-talk'},[
-      el('div',{class:'p-title'},[title]),
+      el('div',{class:'p-title'},[
+        title,
+        award? el('span',{class:'p-award'},[award]) : null
+      ]),
       authors.length? renderAuthors(authors): null
     ])
   ]);
